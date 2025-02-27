@@ -1,6 +1,6 @@
 # Game server API
 
-A game server built with Deno for the players.
+A game server built with Deno KV.
 
 [Go to example game](https://miguelripoll23.github.io/hood-ball/)
 
