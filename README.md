@@ -6,7 +6,7 @@ A game server built with Deno for the players.
 
 ## Demo
 
-TODO
+![image](https://github.com/user-attachments/assets/3a888869-0ea6-488e-b5d5-181453022672)
 
 ## Features
 
@@ -18,7 +18,7 @@ TODO
 - Secure score management
 - Auto-generated API documentation
 
-## Getting Started
+## Getting started
 
 1. Create an .env file based on the template file `.env.template`
 2. Execute `deno task dev`
