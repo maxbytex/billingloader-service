@@ -4,19 +4,17 @@ A game server built with Deno for the players.
 
 [Go to example game](https://miguelripoll23.github.io/hood-ball/)
 
+## Features
+
+- User registration and authentication using device authenticator
+- Secure cloud-based game configuration to update game settings remotely
+- Server messages and notifications for connected players
+- Matchmaking using token-based pairing with tunneling support
+- Secure player score management
+
 ## Demo
 
 ![image](https://github.com/user-attachments/assets/3a888869-0ea6-488e-b5d5-181453022672)
-
-## Features
-
-- User registration and authentication using WebAuthn
-- Secure cloud game configuration management
-- Server messages for just-joined players
-- Server real-time notifications for connected-players
-- Secure matchmaking using tokens
-- Secure score management
-- Auto-generated API documentation
 
 ## Getting started
 
