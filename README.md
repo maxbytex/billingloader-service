@@ -1,4 +1,4 @@
-# Game server API
+# Game server
 
 A game server built with Deno KV.
 
