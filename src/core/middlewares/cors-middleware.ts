@@ -1,0 +1,28 @@
+import { createMiddleware } from "hono/factory";
+
+export class CORSMiddleware {
+  public static create(): ReturnType<typeof createMiddleware> {
+    return createMiddleware(async (c, next) => {
+      // Skip CORS headers for WebSocket requests
+      if (c.req.path.includes("/websocket")) {
+        return next();
+      }
+
+      // Set CORS headers for all requests
+      c.res.headers.set("Access-Control-Allow-Origin", "*");
+      c.res.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+      c.res.headers.set(
+        "Access-Control-Allow-Headers",
+        "Content-Type, Authorization",
+      );
+
+      // Handle preflight requests (OPTIONS)
+      if (c.req.method === "OPTIONS") {
+        return c.body(null, 204); // Respond with an empty body
+      }
+
+      // Continue to the next middleware/handler
+      await next();
+    });
+  }
+}
