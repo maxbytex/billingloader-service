@@ -15,7 +15,6 @@ import {
 } from "@simplewebauthn/server";
 import { CredentialKV } from "../interfaces/kv/credential-kv.ts";
 import { ServerError } from "../models/server-error.ts";
-import { ICEService } from "./ice-service.ts";
 import {
   AuthenticationResponse,
   GetAuthenticationOptionsRequest,
@@ -26,8 +25,7 @@ import {
 export class AuthenticationService {
   constructor(
     private kvService = inject(KVService),
-    private jwtService = inject(JWTService),
-    private iceService = inject(ICEService),
+    private jwtService = inject(JWTService)
   ) {}
 
   public async getOptions(
