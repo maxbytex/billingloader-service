@@ -99,8 +99,7 @@ export class AuthenticationService {
 
     await this.kvService.setKey(userId, sessionKey);
 
-    // ICE servers
-    const iceServers = await this.iceService.getServers();
+  
 
     const response: AuthenticationResponse = {
       user_id: userId,
@@ -108,7 +107,7 @@ export class AuthenticationService {
       authentication_token: authenticationToken,
       session_key: sessionKey,
       public_ip: publicIp,
-      rtc_ice_servers: iceServers,
+    
     };
 
     return response;

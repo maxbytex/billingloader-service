@@ -73,9 +73,7 @@ export const VerifyAuthenticationResponseSchema = z.object({
     .nullable()
     .describe("The public IP of the user")
     .openapi({ example: "…" }),
-  rtc_ice_servers: z
-    .array(RTCIceServerSchema)
-    .describe("The RTC ICE servers for the user"),
+  
 });
 
 export type AuthenticationResponse = z.infer<
